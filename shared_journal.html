@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Wall</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Dancing+Script&display=swap" rel="stylesheet">
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Caveat', cursive;
+        background-image: url("images/background.jpg");
+      }
+
+      header {
+        background-color: #090967;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-bottom: 4px solid #b22222;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 2rem;
+        font-family: 'Dancing Script', cursive;
+        color: #ff9ff5;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .buttons button {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        background-color: #b22222;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .photo-wall {
+        background-image: url("wall.jpg");
+        background-size: cover;
+        background-position: center;
+        padding: 2rem;
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 1.5rem;
+        justify-items: center;
+      }
+
+      .flip-card {
+        background-color: transparent;
+        width: 180px;
+        height: 240px;
+        perspective: 1000px;
+      }
+
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
+
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+
+      .flip-card-front,
+      .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .flip-card-front {
+        background-color: #fff0f5;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Caveat', cursive;
+        font-size: 1.2rem;
+        padding: 1rem;
+        box-sizing: border-box;
+      }
+
+      .flip-card-back {
+        transform: rotateY(180deg);
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>The Emergency Exit's Memory Wall</h1>
+      <div class="buttons">
+        <button onclick="location.href='index.html'">Home</button>
+      </div>
+    </header>
+
+    <main class="photo-wall">
+      <!-- 14 Flip Cards -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Vikram ka Betaal</div>
+          <div class="flip-card-back" style="background-image: url('images/1.jpeg');"></div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Where do I see myself in 10 Years</div>
+          <div class="flip-card-back" style="background-image: url('images/2.jpeg');"></div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Are you seeing a pattern? Harr photo meh bandar ki tarah chad rakhi hai!</div>
+          <div class="flip-card-back" style="background-image: url('images/3.jpeg');"></div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Thoda hummien bhi chadne ka mauka dijiye...</div>
+          <div class="flip-card-back" style="background-image: url('images/4.jpeg');"></div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">This is constant, Lipistick Chorr....</div>
+          <div class="flip-card-back" style="background-image: url('images/5.jpeg');"></div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Something about this date...When I look back, I always look back to this date...</div>
+          <div class="flip-card-back" style="background-image: url('images/6.jpeg');"></div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">My HOTTT aagh girlfriend on periods</div>
+          <div class="flip-card-back" style="background-image: url('images/7.jpeg');"></div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">How were all the pictures of this day...GOOOD...</div>
+          <div class="flip-card-back" style="background-image: url('images/8.jpeg');"></div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Reason You Should Earn 99</div>
+          <div class="flip-card-back" style="background-image: url('images/9.jpeg');"></div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Paanp Kareh ya Dhoyeh?</div>
+          <div class="flip-card-back" style="background-image: url('images/10.jpeg');"></div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Kaleshi Date</div>
+          <div class="flip-card-back" style="background-image: url('images/11.jpeg');"></div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Best Reason to Date?</div>
+          <div class="flip-card-back" style="background-image: url('images/12.mp4');"></div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
